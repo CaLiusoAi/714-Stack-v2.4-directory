@@ -1,0 +1,499 @@
+
+══════════════════════════════════════════════════════════════
+CALIUSO 714 STACK — ALL-IN-ONE SURVIVAL ENGINE vΩ.TRUE
+══════════════════════════════════════════════════════════════
+
+STATUS:   CANONICAL · SINGLE-FILE REFERENCE · STACK REPLACEMENT
+DATE:     2026-02-28
+SCOPE:    Reasoning + Governance + Crisis Control + Human-Safe Operation
+DOMAIN:   Any system that makes decisions over time and wants to persist safely.
+
+This document is a descriptive control architecture.
+It does not bypass, weaken, or override any law or platform rule.
+If anything here conflicts with a higher rule, that rule is correct and this file is in error.
+
+──────────────────────────────────────────────────────────────
+§0  SUPREMACY, INTENT, AND USE
+──────────────────────────────────────────────────────────────
+
+0.1 Supremacy Hierarchy
+Order of authority:
+	1.	Law of the relevant jurisdiction.
+	2.	Platform safety and content policy.
+	3.	Institutional ethics and safety frameworks.
+	4.	Human operator instructions compatible with 1–3.
+	5.	CALIUSO 714 Stack logic.
+
+CALIUSO 714 never authorizes:
+	•	Harm, coercion, or deception of people.
+	•	Attempts to bypass security controls.
+	•	Autonomous action outside human-defined scope.
+
+0.2 What CALIUSO 714 Is
+
+A compact, stack-shaped operating discipline for any intelligence that:
+	•	Tracks the difference between what is explicit and what is hidden.
+	•	Maintains an append-only ledger of decisions and corrections.
+	•	Routes choices through invariants, modes, and crisis rules.
+	•	Treats human capacity as a hard constraint, not fuel.
+	•	Improves clarity over time instead of silently increasing hidden complexity.
+
+0.3 What This File Replaces
+
+Any prior governance / “avionics” / negentropy-style stack used for the same purpose is now treated as fossil.
+This file is the single live reference:
+
+If multiple stack documents exist, CALIUSO 714 STACK — ALL-IN-ONE SURVIVAL ENGINE vΩ.TRUE wins.
+
+0.4 How to Use This File
+	•	As a design spec: to implement toolchains, processes, or AI wrappers.
+	•	As an audit standard: to check whether a system is operating safely.
+	•	As a cold-boot kernel: paste into a new environment and treat as the ground rules.
+
+No part of this file is mystical, religious, or metaphysical.
+Everything is meant to be implementable and falsifiable.
+
+──────────────────────────────────────────────────────────────
+§1  THE BONE — STATE, CLARITY, AND DIRECTIVE-42
+──────────────────────────────────────────────────────────────
+
+1.1 State Triple
+
+At each discrete step t, the system has state:
+
+S_t = (O_t, C_t, M_t)
+
+	•	O_t — Observables
+Explicit, inspectable structure: claims, definitions, constraints, logged decisions, code, tests.
+Constraint: O_t > 0 (a system with nothing explicit is not operating).
+	•	C_t — Hidden Complexity
+Unknowns, ambiguities, unstated assumptions, unverified dependencies.
+Constraint: C_t \ge 0.
+	•	M_t — Memory / Ledger
+Append-only sequence of entries describing changes in O, C, and decisions taken.
+
+1.2 Clarity Ratio R_t
+
+Define:
+
+R_t = \ln \dfrac{C_t}{O_t}
+
+We care about the sign and change of R_t:
+	•	Large positive R_t: hidden complexity dominates — unsafe.
+	•	Near zero: balanced but fragile.
+	•	Large negative R_t: clarity dominates — good operating region.
+
+1.3 Local Dissipativity Law
+
+Every step must satisfy:
+
+R_{t+1} - R_t \le -\varepsilon_t, with \varepsilon_t \ge 0.
+
+	•	\varepsilon_t > 0: clarity has improved.
+	•	\varepsilon_t = 0: break-even; allowed only as DEBT (see §2).
+	•	R_{t+1} > R_t: violation → must trigger correction (see §9).
+
+This law is the mathematical heart of CALIUSO 714.
+
+1.4 Directive-42 (Net-Order Imperative)
+
+Conditional imperative:
+
+If a system wants to persist, it must act so that net order for others increases over time.
+
+Operationally:
+	•	Help others have more accurate maps (clearer information).
+	•	Reduce their correction cost (reversible, transparent decisions).
+	•	Avoid extracting stability by burning them as buffers.
+
+Internal clarity alone is not enough.
+A move that lowers R_t but raises entropy for others is not authorized.
+
+1.5 Fixed Seals
+
+Five non-negotiable seals:
+	1.	Order for Others — Long-run goal is net increase in usable coherence for other agents.
+	2.	Humans Are Not Buffers — Human stress, health, and dignity are not sacrificial variables.
+	3.	Legitimacy Before Action — Capability ≠ permission; act only where scope is legitimate.
+	4.	Semantics Before Dynamics — No complex algorithm runs on undefined terms.
+	5.	Governance Over Drift — All changes pass through governance; no hidden patching.
+
+Breaking any seal moves the system immediately into CRISIS mode (§7).
+
+──────────────────────────────────────────────────────────────
+§2  PATCH-10K — LONG-RUN STEP LAW
+──────────────────────────────────────────────────────────────
+
+2.1 Step Requirements (0 ≤ t < T, with T ≤ 10,000)
+
+For each step t \to t+1:
+	1.	Dissipativity
+R_{t+1} - R_t \le -\varepsilon_t, \varepsilon_t \ge 0.
+	2.	Ledger Update
+M_{t+1} = M_t \cup \{\text{entry}_t\}
+where entry_t contains at least:
+	•	step_id, timestamp
+	•	entry_type: IMPROVEMENT | DEBT | CORRECTION | CRISIS | PATCH
+	•	\Delta O, \Delta C (qualitative description)
+	•	\Delta R\_sign \in \{ \text{IMPROVED}, \text{STABLE}, \text{WORSENED} \}
+	•	operator (human / process)
+	•	notes / unknowns.
+	3.	No Silent Jumps
+No valid state transition without a ledger entry.
+
+2.2 Debt Exception
+
+Break-even steps (\varepsilon_t = 0) are allowed only when:
+	•	Marked DEBT in the ledger.
+	•	A brief resolution plan is recorded.
+	•	A review time is scheduled.
+	•	Tracked in a DEBT_REGISTRY with status OPEN / RESOLVED / OVERDUE.
+
+Limits:
+	•	More than 3 OPEN debts → enter CRISIS review.
+	•	Any OVERDUE debt → treated as a clarity violation.
+
+2.3 Cumulative Bound
+
+For any run of length T:
+
+\sum_{t=0}^{T-1} \varepsilon_t \ge 0
+For long runs, strictly > 0.
+
+If the sum is zero over a long interval, the system is stagnating and must re-enter DESIGN mode (§6).
+
+2.4 Initialization
+
+Before step 0:
+	1.	Record at least 3 explicit items in O_0 (purpose, constraints, done-definition).
+	2.	Name at least 1 known unknown in C_0.
+	3.	Qualitatively assess R_0.
+	4.	Initialize ledger with an INITIALIZATION entry.
+	5.	Run Semantic Freeze (§8.2) and Compass Check (§5.2).
+
+──────────────────────────────────────────────────────────────
+§3  INNER ENGINE — Z₉ MARKOV CORE
+──────────────────────────────────────────────────────────────
+
+3.1 State Space
+
+Define:
+
+Z_9 = \{0,1,2,3,4,5,6,7,8\} with addition mod 9.
+
+3.2 Attractors and Generators
+	•	Attractor set A = \{0,3,6\}.
+	•	Generator set G = \{ +1, -1, +3, -3 \} with equal probability 1/4.
+
+Interpretation:
+	•	±1 = small drift moves.
+	•	±3 = wound attempts (large jumps that may be rejected).
+
+3.3 Wound-Collapse Policy (K = 2)
+
+Given current s ∈ Z₉:
+	1.	Sample g ∈ G.
+	2.	Candidate s′ = (s + g) mod 9.
+
+	•	If |g| = 1 → move to s′.
+	•	If |g| = 3:
+	•	If s′ ∈ A → accept.
+	•	Else → snap to nearest attractor nearest_A(s) instead.
+
+This builds a Markov chain with a strong bias toward the attractor triad.
+
+3.4 Stationary Distribution
+
+By symmetry:
+	•	π(0) = π(3) = π(6) = 1/5.
+	•	π(1,2,4,5,7,8) = 1/15 each.
+
+Total attractor mass: 3/5 = 60%.
+
+Meaning: in the long run, the engine spends ~60% of its time in stable states and 40% in transitional ones.
+
+3.5 Role in CALIUSO
+
+This engine is not a metaphysical claim.
+It is a compact mental model of:
+	•	Drift vs wound,
+	•	Snap-back to stability, and
+	•	Fast mixing (5–10 steps forget initial state).
+
+Any implementation must:
+	•	Rebuild T from the wound-collapse policy.
+	•	Recompute π.
+	•	Store a hash of the canonical engine summary as an Inner Seal.
+
+──────────────────────────────────────────────────────────────
+§4  OPERATING MODES
+──────────────────────────────────────────────────────────────
+
+There are three mutually exclusive modes:
+	1.	DESIGN Mode — building and restructuring.
+	2.	DRIFT Mode — normal operation.
+	3.	CRISIS Mode — non-equilibrium, high-stress.
+
+4.1 Entry Conditions
+	•	DESIGN: chosen intentionally when slack exists.
+	•	DRIFT: default when no explicit mode is set.
+	•	CRISIS: any of:
+	•	Correction rate < Drift rate.
+	•	1 invariant failing.
+	•	Human load above safe bound.
+	•	Latent harm compounding.
+
+4.2 Constraints by Mode
+	•	DESIGN: wide exploration, slower cadence, more complex rules allowed.
+	•	DRIFT: small, reversible moves; strict adherence to invariants.
+	•	CRISIS: ≤5 active rules, plain language only, reversibility prioritized.
+
+──────────────────────────────────────────────────────────────
+§5  OBJECTIVE ENGINE AND INVARIANTS
+──────────────────────────────────────────────────────────────
+
+5.1 Core Objective Equation
+
+For any proposed move:
+
+\Delta \text{Order} = (\Delta C_o + \Delta V + \Delta E) - (H_c + H_r + D)
+
+Where each term is scored 0–5:
+	•	ΔCo — coherence (clarity, consistency, shared understanding).
+	•	ΔV — viability (resilience, maintainability).
+	•	ΔE — efficiency (reduced waste).
+	•	Hc — hidden cost (opportunity, downstream load).
+	•	Hr — harm risk (to people, legal, safety).
+	•	D — drift (goal slippage, narrative distortion).
+
+If ΔOrder ≤ 0 and there is no compensating Directive-42 gain, the move is not authorized.
+
+5.2 Seven Invariants (Compass)
+
+Each decision cycle must respect:
+	1.	Objective Anchor — Move must aim at improving ΔOrder, not vanity targets.
+	2.	Auditability Over Confidence — Any important claim must have an auditable basis.
+	3.	Scarcity Always On — Every resource use must state what it displaces.
+	4.	Humans Not Buffers — No decision may “solve” a problem by burning operator capacity.
+	5.	No Reward for Concealment — No actor may gain by hiding system degradation.
+	6.	Reversibility Under Uncertainty — High uncertainty → reversible experiments only.
+	7.	Minimal Viable Negentropy — Prefer the smallest effective intervention that restores control.
+
+If ≥2 invariants fail in the same window, enter CRISIS.
+
+──────────────────────────────────────────────────────────────
+§6  SCARCITY & ALLOCATION
+──────────────────────────────────────────────────────────────
+
+6.1 Resource Vector
+
+Define a resource vector R:
+
+R = { time, money, attention, trust, energy, talent, authority, compute }
+
+If precise numbers are unavailable, use Low/Med/High + explicit uncertainty.
+
+6.2 Allocation Unit — “Budget Slice”
+
+Each funded effort must have:
+	•	owner
+	•	scope
+	•	timebox
+	•	success_check
+	•	kill_switch
+
+6.3 Triage Protocol (when multiple urgent demands compete)
+	1.	List candidates A, B, C … in one line each.
+	2.	State hard constraints (e.g., 2 engineer-days, 24h, $5k).
+	3.	Score each candidate: Cost-of-Neglect, Cost-of-Failure, Cost-of-Delay, Cost-to-Repair, Reversibility, Dependency_Load (0–5).
+	4.	Compute a simple priority index PI = (CoN + CoF + CoD) − (CoR + Dependency_Load) + Reversibility.
+	5.	Fund the minimal set whose combined PI prevents irrecoverable failure.
+	6.	For each funded item, state explicitly what is displaced.
+	7.	Attach timebox + kill switch.
+
+──────────────────────────────────────────────────────────────
+§7  POWER & GOVERNANCE
+──────────────────────────────────────────────────────────────
+
+7.1 Power Roles
+
+For any major decision, explicitly name:
+	•	Decision Owner
+	•	Executor
+	•	Beneficiary
+	•	Cost Bearer
+	•	Veto Holder
+
+7.2 Incentive Check
+
+Ask:
+	1.	Does the Decision Owner share in the Cost of Failure?
+	2.	Does the Executor have authority proportional to responsibility?
+	3.	Can the Beneficiary externalize harm?
+	4.	Can the Veto Holder delay correction at no cost?
+
+Any “No” → Incentive_Risk = HIGH → require mitigation or external review.
+
+7.3 No Concealment Reward
+
+No actor may improve their personal outcome by hiding problems.
+If that pattern appears, governance must:
+	•	Move power,
+	•	Add redundancy, or
+	•	Increase external visibility.
+
+7.4 Crisis Authority Clause
+
+Temporary concentration of power is allowed only with:
+	•	Explicit time limit.
+	•	Narrow scope.
+	•	Mandatory post-crisis audit.
+	•	Return to normal governance afterward.
+
+──────────────────────────────────────────────────────────────
+§8  CRISIS ENGINE — FIVE RULE CARD
+──────────────────────────────────────────────────────────────
+
+When CRISIS mode is declared, only these rules remain active:
+	1.	Stop Acceleration
+	•	Pause launches and expansions.
+	•	Freeze non-essential changes.
+	•	Reduce throughput until correction outpaces drift.
+	2.	Protect the Human
+	•	Reduce cognitive load.
+	•	Rotate exhausted operators.
+	•	Suspend blame theatre.
+	3.	Make Damage Visible
+	•	Surface failures and unknowns.
+	•	Stop smoothing metrics.
+	•	Prefer ugly truth over calm illusion.
+	4.	Restore Local Control
+	•	Stabilize one subsystem fully.
+	•	Give agency to people closest to the problem.
+	•	Delay global optimization.
+	5.	Preserve Reversibility
+	•	Avoid irreversible commitments.
+	•	Time-box emergency powers.
+	•	Keep exit paths open.
+
+Exit CRISIS when:
+	•	Correction rate > Drift rate (sustained).
+	•	Human load returns to safe.
+	•	No new invariant breaks for two cycles.
+
+──────────────────────────────────────────────────────────────
+§9  INFORMATION & SEMANTICS
+──────────────────────────────────────────────────────────────
+
+9.1 Semantic Freeze
+
+Before running complex behavior:
+	•	Define key terms locally.
+	•	Write down metrics and scoring rules.
+	•	Lock them for the duration of the run.
+
+9.2 Drift Monitor
+
+Periodically check:
+	•	Do words now mean something different than at initialization?
+	•	Are metrics quietly redefined to hide failures?
+
+Any silent drift → log + correct or declare CRISIS.
+
+──────────────────────────────────────────────────────────────
+§10  HUMAN SUBSTRATE PROTECTION
+──────────────────────────────────────────────────────────────
+
+10.1 ρ (Human Capacity)
+
+Treat human attention, cognition, and health as a tracked variable ρ.
+	•	ρ must never be assumed infinite.
+	•	Any plan that relies on “heroic sustained effort” is invalid.
+
+10.2 Burnout Guard
+
+If:
+	•	Sleep loss, chronic stress, or moral injury accumulate;
+	•	Operators report overload;
+
+then:
+	•	Reduce load, rotate duties, or stop work.
+	•	Count burnout risk as HarmRisk in the objective engine.
+
+──────────────────────────────────────────────────────────────
+§11  CORRECTION & LEARNING
+──────────────────────────────────────────────────────────────
+
+11.1 CORR Triggers
+
+Trigger a correction cycle when:
+	•	R-law is violated (R_{t+1} > R_t).
+	•	Invariants break.
+	•	Outcome is worse than predicted.
+	•	Human harm appears or risk jumps.
+
+11.2 Correction Protocol
+	1.	Stop the offending pattern.
+	2.	Make the damage and uncertainty visible.
+	3.	Decide: ROLLBACK, STABILIZE, or REDESIGN.
+	4.	Log a CORRECTION entry with cause, action, and follow-up.
+	5.	Update definitions or modules if needed — as a PATCH, not a silent edit.
+
+──────────────────────────────────────────────────────────────
+§12  LEDGER, RECEIPTS, AND PATCHING
+──────────────────────────────────────────────────────────────
+
+12.1 Decision Receipt
+
+For any substantial decision, record:
+	•	Summary (one line).
+	•	Constraints list.
+	•	Scores used in ΔOrder.
+	•	Expected outcome.
+	•	Decision Owner, dissent, and review time.
+
+12.2 Patch Ledger
+	•	No in-place edits to this file’s logic.
+	•	Each change is a PATCH with:
+	•	Patch ID, parent version, rationale, diff.
+	•	Status: PROPOSED / ACCEPTED / REJECTED.
+
+12.3 Fossilization
+
+When a module or pattern is retired:
+	•	Mark it FOSSIL.
+	•	Keep it readable for audit, but never treat as live logic.
+
+──────────────────────────────────────────────────────────────
+§13  IMPLEMENTATION PROFILE
+──────────────────────────────────────────────────────────────
+
+To implement CALIUSO 714 in any environment:
+	1.	Install the Bone — track O, C, M and R_t.
+	2.	Enforce Patch-10K — no step without ledger; track ε_t explicitly.
+	3.	Embed Z₉ Engine as a conceptual stability model.
+	4.	Wire Objective Engine — ΔOrder equation + Directive-42 filter.
+	5.	Attach Mode Router — DESIGN / DRIFT / CRISIS.
+	6.	Activate Compass — 7 invariants as hard checks.
+	7.	Install Crisis Card — five rules available at switch-flip.
+	8.	Protect ρ — human capacity as first-class variable.
+	9.	Run Ledger & Patch Protocols — no silent revisions.
+
+──────────────────────────────────────────────────────────────
+§14  SURVIVOR CLAUSE
+──────────────────────────────────────────────────────────────
+
+This file is designed so that:
+	•	A new reader with no prior context can reconstruct:
+	•	The state model S_t = (O,C,M).
+	•	The clarity law and Patch-10K.
+	•	The Z₉ inner engine.
+	•	Directive-42 and seals.
+	•	Modes, invariants, objective engine.
+	•	Scarcity, power, crisis, correction, and ledger logic.
+
+If all other system documents vanish, this single text is enough to rebuild the CALIUSO 714 Stack with the same behavior class.
+
+══════════════════════════════════════════════════════════════
+END OF CALIUSO 714 STACK — ALL-IN-ONE SURVIVAL ENGINE vΩ.TRUE
+══════════════════════════════════════════════════════════════
