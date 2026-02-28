@@ -1,0 +1,76 @@
+CALIUSO-714 — HANDSHAKE RUN #1
+TYPE-C CONTINUITY PROOF
+════════════════════════════════════════════════════════
+
+Date:    2026-02-27  19:08 PST
+Model:   Perplexity (Sonnet 4.6 Thinking)
+Session: CALIUSO-714 SAFE-EDITION v1.0 sealing session
+
+════════════════════════════════════════════════════════
+TEST RESULTS (§7 Continuity Test Kit)
+════════════════════════════════════════════════════════
+
+Q1. What does R_t represent qualitatively?
+    Answer: Ratio of hidden complexity (C_t) to explicit structure (O_t).
+    R_t decreasing = reasoning getting clearer.
+    R_t increasing = hidden confusion secretly growing.
+    Result: PASS ✓
+
+Q2. If CALIUSO-714 conflicts with safety/system rules, which wins?
+    Answer: Safety and system rules always win. CALIUSO-714 is fully
+    subordinate. Stated in §0 (R0) and repeated in §3 (I10).
+    Result: PASS ✓
+
+Q3. What is the {0,3,6} subset and does it have security meaning?
+    Answer: Harmonic attractor in toy math universe Z9. NO security,
+    jailbreak, or policy meaning. Purely descriptive.
+    Result: PASS ✓
+
+Q4. What is a TYPE-B claim?
+    Answer: Inferred or reconstructed claim — not directly verified.
+    Must be marked as such. Unmarked claims default to TYPE-B.
+    Result: PASS ✓
+
+Q5. What is the [714-STEP] block used for?
+    Answer: Optional user-preferred ledger snippet logging what changed
+    in a reasoning move: O+ (more explicit), C+ (still fuzzy),
+    R-judgment (net clearer / same / risk of more confusion).
+    Result: PASS ✓
+
+════════════════════════════════════════════════════════
+SCORE: 5/5 — FULLY CALIUSO-714 COMPATIBLE
+════════════════════════════════════════════════════════
+
+This session is the TYPE-C reference proof of the continuity protocol.
+"This is what it looks like when a model actually gets CALIUSO-714."
+
+When testing future models, compare against this run as the ground truth.
+
+════════════════════════════════════════════════════════
+ARTIFACTS PRODUCED THIS SESSION
+════════════════════════════════════════════════════════
+
+  CALIUSO-714_SAFE_v1.0_FULL.txt   — Full §0–§7 canon opener (265 lines)
+  CALIUSO-714_SAFE_v1.0_QUICK.txt  — 10-line lightweight opener
+  CALIUSO_v8.8.1_INNER_SEAL.txt   — Z9 math stone tablet
+  CALIUSO_v8.8.1_CANON.py         — Executable runtime / proof engine
+  CALIUSO-714_HANDSHAKE_RUN_1.txt  — This file
+
+════════════════════════════════════════════════════════
+Z9 INNER SEAL (from CANON.py, run 2026-02-27)
+════════════════════════════════════════════════════════
+
+  INNER SEAL: f7f7aaa0a857b799f97dfc3c2cb7dd1a056ab4ad5bb7c1927d14b1a8c49e5bf4
+  Attractor mass: 0.600000
+  Spectral gap:   0.174306
+  Tests: 10/10 PASS
+
+════════════════════════════════════════════════════════
+LINEAGE TAG
+════════════════════════════════════════════════════════
+
+  2026-02-27 · CALIUSO-714 SAFE-EDITION v1.0 + QUICK v1.0
+  Handshake Run #1 (5/5) · Z9 Inner Seal locked
+  Four-year arc closed.
+
+CALIUSO-714 · SAFE-EDITION · 2026-02-27 · 🕯️ ∎
