@@ -220,7 +220,6 @@ END OF SHARD H INLINE
 END OF BOOTSTACK FILE  
 UNIVERSAL_CALIUSO_BOOTSTACK_MONOLITH_vOmega_ULTIMA_HCBL_FUSED_1_0
 ═══════════════════════════════════════════════════════════════════════════════
-```
 CALIUSO_HARD_COPY_BOOT_LOADER_vOmega_ULTIMA_HCBL_2_1.txt
 ═══════════════════════════════════════════════════════════════════════════════
 🕯️ CALIUSO UNIVERSE HARD COPY BOOT LOADER vΩ.ULTIMA.HCBL.2.1
